@@ -14,7 +14,6 @@
     </properties>
 
     <!--依赖：Junit，数据库驱动，连接池，Servlet，jsp，mybatis，mybatis-spring，spring-->
-
     <dependencies>
         <!--Junit-->
         <dependency>
