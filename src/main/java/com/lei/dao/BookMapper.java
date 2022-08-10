@@ -1,7 +1,6 @@
 package com.lei.dao;
 import com.lei.pojo.Books;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface BookMapper {
@@ -10,7 +9,6 @@ public interface BookMapper {
 
     //删除一本书
     int deleteBookById(@Param("bookID") int id);
-
 
     //更改一本书
     int updateBook(Books books);
