@@ -78,9 +78,7 @@ public class BookController {
     @RequestMapping("/queryBook")
     public String queryBook(String queryBookName,Model model) {
         List<Books> list = bookService.queryBook(queryBookName);
-
         model.addAttribute("list",list);
-
         return "allBook";
     }
 
@@ -88,18 +86,13 @@ public class BookController {
     @RequestMapping("/queryBookByName")
     public String queryBookByName(String queryBookName,Model model) {
         Books books = bookService.queryBookByName(queryBookName);
-
         List<Books> list = new ArrayList<Books>();
-
         list.add(books);
-
         if (books == null) {
             list = bookService.queryAllBooks();
             model.addAttribute("error","未查到");
         }
-
         model.addAttribute("list",list);
-
         return "allBook";
     }
 
